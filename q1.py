@@ -24,12 +24,12 @@ def get_model(method):
     elif method == "GaussianNB":
         model = GaussianNB()
     elif method == "LogisticRegression":
-        model = model = LogisticRegression(
-        penalty='l2',
-        solver='lbfgs',
-        random_state=42,
-        max_iter=1000
-    )
+        model = LogisticRegression(
+            penalty='l2',
+            solver='lbfgs',
+            random_state=42,
+            multi_class='multinomial'
+        )
     elif method == "RandomForestClassifier":
         model = RandomForestClassifier(max_depth=15, n_estimators=250, random_state=42)
     elif method == "XGBClassifier":
