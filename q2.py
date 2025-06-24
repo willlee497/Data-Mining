@@ -24,7 +24,7 @@ def get_model(method):
             penalty='l2',
             solver='lbfgs',
             random_state=42,
-            max_iter=1000
+            multi_class='multinomial'
         )
     elif method == "RandomForestClassifier":
         model = RandomForestClassifier(max_depth=15, n_estimators=250, random_state=42)
